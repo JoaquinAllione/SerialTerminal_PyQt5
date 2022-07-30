@@ -66,6 +66,14 @@ class Ui_MainWindow(object):
 "}")
         self.textBrowser_terminal_view.setObjectName("textBrowser_terminal_view")
         self.verticalLayout_4.addWidget(self.textBrowser_terminal_view)
+        self.label_status = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        self.label_status.setFont(font)
+        self.label_status.setStyleSheet("border: none;")
+        self.label_status.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_status.setObjectName("label_status")
+        self.verticalLayout_4.addWidget(self.label_status)
         self.verticalLayout_3.addWidget(self.frame_6)
         self.frame_8 = QtWidgets.QFrame(self.frame_2)
         self.frame_8.setStyleSheet("QPushButton{\n"
@@ -89,6 +97,10 @@ class Ui_MainWindow(object):
         self.lineEdit_data = QtWidgets.QLineEdit(self.frame_8)
         self.lineEdit_data.setMinimumSize(QtCore.QSize(0, 40))
         self.lineEdit_data.setMaximumSize(QtCore.QSize(16777215, 40))
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        font.setPointSize(-1)
+        self.lineEdit_data.setFont(font)
         self.lineEdit_data.setStyleSheet("QLineEdit{\n"
 "    border-radius: 10px;\n"
 "    border: 2px solid rgb(50, 190, 166);\n"
@@ -202,6 +214,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_2 = QtWidgets.QLabel(self.frame_7)
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        self.label_2.setFont(font)
         self.label_2.setStyleSheet("")
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
@@ -275,6 +290,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.label_3 = QtWidgets.QLabel(self.frame_10)
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_5.addWidget(self.label_3)
         self.comboBox_baudrate = QtWidgets.QComboBox(self.frame_10)
@@ -418,6 +436,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "SERIAL Terminal"))
+        self.label_status.setText(_translate("MainWindow", "Disconnected"))
         self.lineEdit_data.setPlaceholderText(_translate("MainWindow", "INSERT DATA HERE"))
         self.pushButton_send.setToolTip(_translate("MainWindow", "Send data"))
         self.pushButton_clean.setToolTip(_translate("MainWindow", "Clean Terminal."))

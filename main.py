@@ -53,6 +53,7 @@ class MiApp(QMainWindow):
 			self.port.close()
 			self.ui.textBrowser_terminal_view.setTextColor(QColor.fromRgb(250,50,50))
 			self.ui.textBrowser_terminal_view.append('>> ' + 'PORT DISCONNECTED' + ' <<')
+			self.ui.label_status.setText("Disconnected")
 			self.ui.pushButton_disconnect.setEnabled(False)
 			self.ui.pushButton_connect.setEnabled(True)
 
@@ -67,6 +68,7 @@ class MiApp(QMainWindow):
 				self.ui.textBrowser_terminal_view.append('>> ' + 'CONNECTED TO ' + port + ' <<')
 				self.ui.pushButton_disconnect.setEnabled(True)
 				self.ui.pushButton_connect.setEnabled(False)
+				self.ui.label_status.setText("Connected to " + port)
 		except:
 			self.ui.textBrowser_terminal_view.setTextColor(QColor.fromRgb(250,50,50))
 			self.ui.textBrowser_terminal_view.append('>> ' + 'ERROR OCURRED!' + ' <<')
