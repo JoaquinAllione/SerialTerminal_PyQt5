@@ -1,0 +1,1 @@
+pyuic5 UI_SERIAL_Terminal.ui -o UI_SERIAL_Terminal.py
